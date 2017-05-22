@@ -18,13 +18,13 @@ public class Main {
 		
 		network.activate("q0");
 		network.update();
-		network.print();
+		System.out.println(network);
 		
 		for (int i = 0; i < 20; i++) {
 			if (i%2==0) network.activate("t");
 			if(i==5) network.activate("e");
 			network.update();
-			network.print();
+			System.out.println(network);
 		}
 		
 	}

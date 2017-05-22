@@ -31,13 +31,15 @@ public class Network {
 		for (Node node : this.nodes) node.update();
 	}
 	
-	public void print() {
-		System.out.println("----");
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
 		for (Node node : this.nodes) {
 			if (node.active()) {
-				System.out.println(node);
+				sb.append(node + "\n");
 			}
 		}
+		return sb.toString();
 	}
 	
 	private Node getNode(String name) {
